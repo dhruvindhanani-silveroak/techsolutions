@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,14 +15,15 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-tech-blue to-tech-teal rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">IT</span>
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-green rounded-xl flex items-center justify-center">
+              <span className="text-white font-bold text-lg">T</span>
             </div>
-            <span className="text-xl font-heading font-bold text-tech-gray">TechSolutions</span>
+            <span className="text-xl font-heading font-bold text-gray-800">TechSolutions</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -30,52 +32,62 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-tech-gray hover:text-tech-blue transition-colors duration-200 font-medium"
+                className="text-gray-600 hover:text-brand-blue transition-colors duration-200 font-medium font-body relative group"
               >
                 {item.name}
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-tech-blue text-tech-blue hover:bg-tech-blue hover:text-white">
+          {/* Desktop CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Button 
+              variant="ghost" 
+              className="text-gray-600 hover:text-brand-blue hover:bg-blue-50 font-medium"
+            >
               Get Quote
             </Button>
-            <Button className="bg-tech-blue hover:bg-tech-blue/90 text-white">
+            <Button 
+              className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl px-6 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
               Contact Us
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-tech-gray"
+            className="md:hidden text-gray-600 hover:text-brand-blue transition-colors p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-gray-200">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden mt-6 py-6 border-t border-gray-100 bg-white rounded-2xl shadow-lg mx-4">
+            <nav className="flex flex-col space-y-4 px-6">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-tech-gray hover:text-tech-blue transition-colors duration-200 font-medium"
+                  className="text-gray-600 hover:text-brand-blue transition-colors duration-200 font-medium font-body py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" className="border-tech-blue text-tech-blue hover:bg-tech-blue hover:text-white">
+              <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
+                <Button 
+                  variant="outline" 
+                  className="border-gray-200 text-gray-600 hover:border-brand-blue hover:text-brand-blue rounded-xl"
+                >
                   Get Quote
                 </Button>
-                <Button className="bg-tech-blue hover:bg-tech-blue/90 text-white">
+                <Button 
+                  className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl shadow-lg"
+                >
                   Contact Us
                 </Button>
               </div>

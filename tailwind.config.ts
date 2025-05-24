@@ -63,16 +63,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom IT company colors
-				'tech-blue': '#1e40af',
-				'tech-teal': '#0891b2',
-				'tech-orange': '#ea580c',
-				'tech-gray': '#374151',
-				'tech-light': '#f8fafc'
+				// Modern tech company colors
+				'brand-blue': '#1A73E8',
+				'brand-green': '#34A853',
+				'gray-50': '#F8F9FA',
+				'gray-800': '#2D3436',
+				'gray-100': '#F1F3F4',
+				'gray-200': '#E8EAED',
+				'gray-600': '#5F6368',
+				'blue-50': '#E8F0FE',
+				'blue-100': '#D2E3FC'
 			},
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
 				'heading': ['Poppins', 'system-ui', 'sans-serif'],
+				'body': ['Open Sans', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -115,13 +120,29 @@ export default {
 						opacity: '1',
 						transform: 'translateX(0)'
 					}
+				},
+				'scale-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in': 'slide-in 0.6s ease-out'
+				'slide-in': 'slide-in 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out'
+			},
+			boxShadow: {
+				'soft': '0 2px 8px 0 rgba(99, 99, 99, 0.2)',
+				'card': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+				'card-hover': '0 4px 25px 0 rgba(0, 0, 0, 0.1)'
 			}
 		}
 	},
