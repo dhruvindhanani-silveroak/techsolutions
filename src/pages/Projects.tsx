@@ -1,15 +1,16 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { TrendingUp, Users, Zap, Clock, Star, Shield, Filter, ExternalLink, Github, Globe } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const navigate = useNavigate();
 
   const categories = ['All', 'Web Development', 'Mobile Development', 'Cloud Solutions', 'AI/ML', 'Enterprise'];
 
@@ -272,94 +273,13 @@ const Projects = () => {
                   </div>
 
                   <div className="flex space-x-2 pt-2">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" className="flex-1 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300">
-                          View Details
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-                        <DialogHeader>
-                          <DialogTitle className="text-2xl font-heading text-brand-blue">
-                            {project.title}
-                          </DialogTitle>
-                          <DialogDescription asChild>
-                            <div className="space-y-6">
-                              <img 
-                                src={project.image} 
-                                alt={project.title}
-                                className="w-full h-64 object-cover rounded-lg"
-                              />
-                              
-                              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div>
-                                  <h4 className="font-semibold text-gray-800 mb-2">Client</h4>
-                                  <p className="text-gray-600">{project.client}</p>
-                                </div>
-                                <div>
-                                  <h4 className="font-semibold text-gray-800 mb-2">Duration</h4>
-                                  <p className="text-gray-600">{project.duration}</p>
-                                </div>
-                                <div>
-                                  <h4 className="font-semibold text-gray-800 mb-2">Status</h4>
-                                  <Badge className={project.status === 'Completed' ? 'bg-brand-green' : 'bg-yellow-500'}>
-                                    {project.status}
-                                  </Badge>
-                                </div>
-                              </div>
-
-                              <div>
-                                <h4 className="font-semibold text-gray-800 mb-3">Project Overview</h4>
-                                <p className="text-gray-600 leading-relaxed">{project.fullDescription}</p>
-                              </div>
-
-                              <div>
-                                <h4 className="font-semibold text-gray-800 mb-3">Key Results</h4>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                  {project.metrics.map((metric, idx) => {
-                                    const IconComponent = metric.icon;
-                                    return (
-                                      <div key={idx} className="flex items-center p-3 bg-gray-50 rounded-lg">
-                                        <div className="w-8 h-8 bg-gradient-to-r from-brand-blue to-brand-green rounded-full flex items-center justify-center mr-3">
-                                          <IconComponent size={14} className="text-white" />
-                                        </div>
-                                        <span className="text-sm font-medium text-gray-700">{metric.text}</span>
-                                      </div>
-                                    );
-                                  })}
-                                </div>
-                              </div>
-
-                              <div>
-                                <h4 className="font-semibold text-gray-800 mb-3">Technologies Used</h4>
-                                <div className="flex flex-wrap gap-2">
-                                  {project.technologies.map((tech, idx) => (
-                                    <Badge key={idx} variant="outline" className="text-sm">
-                                      {tech}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              </div>
-
-                              <div className="flex space-x-4 pt-4 border-t">
-                                <Button asChild className="bg-brand-blue hover:bg-brand-blue/90">
-                                  <a href={project.links.live} target="_blank" rel="noopener noreferrer">
-                                    <Globe className="w-4 h-4 mr-2" />
-                                    Live Demo
-                                  </a>
-                                </Button>
-                                <Button variant="outline" asChild>
-                                  <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                                    <Github className="w-4 h-4 mr-2" />
-                                    Source Code
-                                  </a>
-                                </Button>
-                              </div>
-                            </div>
-                          </DialogDescription>
-                        </DialogHeader>
-                      </DialogContent>
-                    </Dialog>
+                    <Button 
+                      variant="outline" 
+                      className="flex-1 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300"
+                      onClick={() => navigate(`/projects/${project.id}`)}
+                    >
+                      View Project
+                    </Button>
                     
                     <Button asChild size="sm" className="bg-brand-green hover:bg-brand-green/90 text-white">
                       <a href={project.links.live} target="_blank" rel="noopener noreferrer">
