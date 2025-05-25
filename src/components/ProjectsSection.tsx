@@ -1,9 +1,10 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { TrendingUp, Users, Zap, Clock, Star, Shield } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectsSection = () => {
+  const navigate = useNavigate();
   const projects = [
     {
       title: 'E-Commerce Platform Redesign',
@@ -117,7 +118,11 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" className="bg-tech-blue hover:bg-tech-blue/90 text-white px-8">
+          <Button 
+            size="lg" 
+            className="bg-tech-blue hover:bg-tech-blue/90 text-white px-8"
+            onClick={() => navigate('/projects')}
+          >
             View All Projects
           </Button>
         </div>
