@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Header from '@/components/Header';
 import { 
   Laptop, 
   Smartphone, 
@@ -141,8 +142,10 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Header />
+      
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-gray-50 py-20">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-gray-50 py-20 pt-32">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand-blue px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-100">
