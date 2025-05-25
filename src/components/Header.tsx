@@ -2,16 +2,16 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -19,24 +19,24 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-green rounded-xl flex items-center justify-center">
               <span className="text-white font-bold text-lg">T</span>
             </div>
             <span className="text-xl font-heading font-bold text-gray-800">TechSolutions</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-gray-600 hover:text-brand-blue transition-colors duration-200 font-medium font-body relative group"
               >
                 {item.name}
                 <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -48,11 +48,13 @@ const Header = () => {
             >
               Get Quote
             </Button>
-            <Button 
-              className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl px-6 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Contact Us
-            </Button>
+            <Link to="/contact">
+              <Button 
+                className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl px-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,14 +71,14 @@ const Header = () => {
           <div className="md:hidden mt-6 py-6 border-t border-gray-100 bg-white rounded-2xl shadow-lg mx-4">
             <nav className="flex flex-col space-y-4 px-6">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-gray-600 hover:text-brand-blue transition-colors duration-200 font-medium font-body py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
                 <Button 
@@ -85,11 +87,13 @@ const Header = () => {
                 >
                   Get Quote
                 </Button>
-                <Button 
-                  className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl shadow-lg"
-                >
-                  Contact Us
-                </Button>
+                <Link to="/contact">
+                  <Button 
+                    className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl shadow-lg w-full"
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
