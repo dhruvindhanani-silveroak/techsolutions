@@ -44,6 +44,11 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand Colors */
+    --brand-blue: #1A73E8;
+    --brand-green: #34A853;
+    --tech-gray: #2D3436;
   }
 
   .dark {
@@ -102,5 +107,75 @@
 
   .modern-shadow-lg {
     box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  /* Brand color utilities */
+  .text-brand-blue {
+    color: var(--brand-blue);
+  }
+
+  .text-brand-green {
+    color: var(--brand-green);
+  }
+
+  .text-tech-gray {
+    color: var(--tech-gray);
+  }
+
+  .bg-brand-blue {
+    background-color: var(--brand-blue);
+  }
+
+  .bg-brand-green {
+    background-color: var(--brand-green);
+  }
+
+  .border-brand-blue {
+    border-color: var(--brand-blue);
+  }
+
+  .border-brand-green {
+    border-color: var(--brand-green);
+  }
+
+  .hover\:bg-brand-blue:hover {
+    background-color: var(--brand-blue);
+  }
+
+  .hover\:text-brand-blue:hover {
+    color: var(--brand-blue);
+  }
+
+  .hover\:border-brand-blue:hover {
+    border-color: var(--brand-blue);
+  }
+}
+
+/* Font family utilities */
+@layer utilities {
+  .font-heading {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', 'Open Sans', sans-serif;
+  }
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
