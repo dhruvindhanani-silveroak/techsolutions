@@ -9,9 +9,10 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },  
   ];
 
   return (
@@ -23,7 +24,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-green rounded-xl flex items-center justify-center">
               <span className="text-white font-bold text-lg">T</span>
             </div>
-            <span className="text-xl font-heading font-bold text-gray-800">TechSolutions</span>
+            <span className="text-xl font-heading font-bold text-gray-800">TeckySoft</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -42,12 +43,12 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button 
+            {/* <Button 
               variant="ghost" 
               className="text-gray-600 hover:text-brand-blue hover:bg-blue-50 font-medium"
             >
               Get Quote
-            </Button>
+            </Button> */}
             <Link to="/contact">
               <Button 
                 className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl px-6 shadow-lg hover:shadow-xl transition-all duration-300"
@@ -81,12 +82,12 @@ const Header = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
-                <Button 
+                {/* <Button 
                   variant="outline" 
                   className="border-gray-200 text-gray-600 hover:border-brand-blue hover:text-brand-blue rounded-xl"
                 >
                   Get Quote
-                </Button>
+                </Button> */}
                 <Link to="/contact">
                   <Button 
                     className="bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl shadow-lg w-full"

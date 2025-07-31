@@ -16,10 +16,10 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-5xl mx-auto animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-brand-blue px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-100">
+          {/* <div className="inline-flex items-center gap-2 bg-blue-50 text-brand-blue px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-100">
             <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse"></span>
             Trusted by 500+ companies worldwide
-          </div>
+          </div> */}
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight text-gray-800">
@@ -36,23 +36,24 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button 
               size="lg" 
+              onClick={() => window.location.href = '/contact'}
               className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 text-lg font-semibold rounded-xl min-w-[220px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button 
+            {/* <Button 
               size="lg" 
               variant="outline" 
               className="border-2 border-gray-200 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-xl min-w-[220px] transition-all duration-300 hover:border-brand-blue hover:text-brand-blue"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Demo
-            </Button>
+            </Button> */}
           </div>
 
           {/* Social Proof */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto opacity-60">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto opacity-60">
             <div className="flex items-center justify-center">
               <div className="bg-gray-100 rounded-lg px-6 py-3 text-gray-600 font-medium">Microsoft</div>
             </div>
@@ -65,7 +66,7 @@ const HeroSection = () => {
             <div className="flex items-center justify-center">
               <div className="bg-gray-100 rounded-lg px-6 py-3 text-gray-600 font-medium">IBM</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
