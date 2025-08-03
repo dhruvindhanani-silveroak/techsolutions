@@ -82,7 +82,7 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <Button variant="outline" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 hover:shadow-lg">
+                <Button variant="outline" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 hover:shadow-lg" onClick={() => navigate(`/projects/${project.slug}`)}>
                   View Details
                 </Button>
               </CardContent>

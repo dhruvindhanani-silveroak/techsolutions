@@ -28,9 +28,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-
-    // Prepare form data as FormData object
     const data = new FormData();
     // Replace 'entry.X' with your actual Google Form field entry IDs
     data.append('entry.1635521394', formData.name);

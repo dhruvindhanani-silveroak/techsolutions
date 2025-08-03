@@ -252,33 +252,6 @@ const Blog = () => {
           )}
         </div>
       </section>
-
-      {/* Newsletter Subscription */}
-      <section className="py-16 bg-gradient-to-br from-brand-blue to-brand-green">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
-              Stay Updated with Tech Insights
-            </h2>
-            <p className="text-xl text-blue-100 font-body mb-8 leading-relaxed">
-              Subscribe to our newsletter and get the latest articles delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-white border-0 py-3"
-              />
-              <Button
-                className="bg-white text-brand-blue hover:bg-gray-50 px-8 py-3 font-medium rounded-xl"
-              >
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

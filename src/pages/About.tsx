@@ -59,11 +59,11 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: 'Yash Dholaria',
+      name: 'Kenil Patel',
       role: 'Founder & CEO',
       image: '/placeholder.svg',
-      description: 'Visionary leader with expertise in business strategy and company growth.',
-      skills: ['Leadership', 'Strategy'],
+      description: 'Tech visionary with a passion for building innovative software solutions that drive business success.',
+      skills: ['Leadership', 'Project Management'],
       social: {
         linkedin: '#',
         github: '#',
@@ -71,11 +71,11 @@ const About = () => {
       }
     },
     {
-      name: 'Kenil Patel',
-      role: 'Lead Full Stack Developer',
+      name: 'Yash Dholaria',
+      role: 'Co-Founder & CMO',
       image: '/placeholder.svg',
-      description: 'Expert in React, Node.js, and modern web technologies, passionate about building scalable applications.',
-      skills: ['React.js', 'Node.js', 'TypeScript'],
+      description: 'Marketing strategist with a focus on digital transformation, driving growth through innovative marketing solutions.',
+      skills: ['Digital Marketing', 'SEO', 'Content Strategy'],
       social: {
         linkedin: '#',
         github: '#',
@@ -131,30 +131,35 @@ const About = () => {
 
   const milestones = [
     {
-      year: '2022',
-      title: 'Company Founded',
-      description: 'TeckySoft was established with a vision to transform businesses through innovative technology solutions.'
+      year: 'Aug 2022',
+      title: 'Humble Beginnings with a Bold Vision',
+      description:
+        'Two passionate friends, Kenil Patel and Yash Dholariya, launched TeckySoft with a single mobile app project and a tight-knit team of three. Focused on honesty, quality, and client-first thinking, we set out to create powerful digital solutions for real business challenges.',
     },
     {
-      year: '2022',
-      title: 'First Major Client',
-      description: 'Successfully delivered our first enterprise-level web application, establishing our reputation for quality.'
+      year: '2022–2023',
+      title: 'Growing Through Every Challenge',
+      description:
+        'Every project brought new hurdles—and we welcomed them. With each client, we refined our process, improved our skills, and adapted quickly, ensuring every client experience was better than the last.',
     },
     {
-      year: '2023',
-      title: 'Mobile App Development',
-      description: 'Expanded our services to include mobile app development with React Native and Flutter expertise.'
-    },
-    {
-      year: '2024',
-      title: 'Team Expansion',
-      description: 'Grew our team to include specialized designers, developers, and project managers.'
+      year: '2023–2024',
+      title: 'Building a Young, Creative & Committed Team',
+      description:
+        'We grew our team with dynamic, skilled, and innovative professionals. Our collaborative culture empowers each member to contribute boldly and deliver results that exceed expectations.',
     },
     {
       year: '2025',
-      title: 'Global Reach',
-      description: 'Successfully completed over 35+ projects, serving clients across various industries worldwide.'
-    }
+      title: 'Global Reach with 39+ Projects Delivered',
+      description:
+        'By 2025, we’ve proudly delivered 39+ successful projects globally, covering industries from healthcare to e-commerce, startups to enterprises. Every solution receives our energy, precision, and dedication.',
+    },
+    {
+      year: 'The Road Ahead',
+      title: 'Innovation, Integrity, and Impact',
+      description:
+        'Our journey is just getting started. As we scale, we remain grounded in our values—innovation, integrity, and impact. We’re your long-term digital partners, committed to building technology that grows your business and earns your trust.',
+    },
   ];
 
   return (
@@ -226,10 +231,10 @@ const About = () => {
                 Building the Future, <span className="gradient-text">One Project at a Time</span>
               </h2>
               <p className="text-lg text-gray-600 font-body leading-relaxed mb-6">
-                Founded in 2019, TeckySoft began as a small team with a big vision: to democratize access to cutting-edge technology solutions for businesses of all sizes. What started as a passion project has evolved into a trusted technology partner for companies worldwide.
+                Founded in 2022, TeckySoft began as a small team with a big vision: to democratize access to cutting-edge technology solutions for businesses of all sizes. What started as a passion project has evolved into a trusted technology partner for companies worldwide.
               </p>
               <p className="text-lg text-gray-600 font-body leading-relaxed mb-8">
-                Our journey has been marked by continuous learning, innovation, and an unwavering commitment to client success. We've had the privilege of working with startups, SMEs, and enterprise clients, helping them leverage technology to achieve their business objectives.
+                Our journey has been marked by continuous learning, innovation, and an unwavering commitment to client success. We've had the privilege of working with startups, SMEs, and enterprise clients, helping them leverage technology to achieve their business objectives with undefeated price in industry.
               </p>
               <div className="flex flex-wrap gap-3">
                 {technologies.map((tech, index) => {
@@ -311,7 +316,7 @@ const About = () => {
               <span className="gradient-text">Milestones</span> & Achievements
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto font-body">
-              A timeline of our growth, achievements, and key milestones over the years.
+              A Journey Built on Passion, Innovation & Trust
             </p>
           </div>
 

@@ -221,22 +221,27 @@ const Services = () => {
             {processSteps.map((step, index) => {
               const IconComponent = step.icon;
               return (
-                <div key={index} className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full border-2 border-brand-green flex items-center justify-center text-brand-green font-bold text-sm">
-                      {index + 1}
-                    </div>
+                <div key={index} className="text-center group p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="relative mb-6">
+                  {/* Icon container with gradient background and hover effect */}
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    {/* Render the dynamic icon component */}
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-heading font-semibold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 font-body leading-relaxed">
-                    {step.description}
-                  </p>
+                  {/* Step number badge - positioned to be on the top-left side of the icon */}
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-white rounded-full border-2 border-green-500 flex items-center justify-center text-green-600 font-bold text-sm">
+                    {index + 1}
+                  </div>
                 </div>
+                {/* Step title with hover effect */}
+                <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                  {step.title}
+                </h3>
+                {/* Step description */}
+                <p className="text-gray-600 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
               );
             })}
           </div>
