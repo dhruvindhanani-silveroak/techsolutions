@@ -1,0 +1,298 @@
+[
+    {
+        "id": 1,
+        "slug": "100vigha",
+        "title": "100Vigha – Real Estate Website",
+        "subtitle": "A modern real estate platform built using React and Firebase.",
+        "description": "A comprehensive real estate platform designed to connect property buyers with sellers through an intuitive and modern interface. The platform features advanced search capabilities, property management tools, and seamless user experience across all devices.",
+        "timeline": "Developed over 3 weeks",
+        "purpose": "The primary goal was to create a user-friendly real estate platform that simplifies property search and listing management. The target audience includes property buyers, sellers, and real estate agents looking for a modern digital solution.",
+        "technologies": [
+            "React.js",
+            "Node.js",
+            "MongoDB",
+            "AWS"
+        ],
+        "features": [
+            "Property listing with advanced filters (price, location, type)",
+            "Contact form for property inquiries with email notifications",
+            "Responsive design optimized for mobile and desktop",
+            "Admin dashboard for managing property listings",
+            "Search functionality with autocomplete suggestions"
+        ],
+        "techStack": [
+            {
+                "name": "React.js",
+                "description": "Chosen for its component-based architecture and reusability, allowing for efficient development and maintenance."
+            },
+            {
+                "name": "Node.js",
+                "description": "Used for building scalable backend services and APIs, enabling efficient server-side operations."
+            },
+            {
+                "name": "MongoDB",
+                "description": "Provided a flexible NoSQL database solution for storing and managing property data."
+            },
+            {
+                "name": "AWS",
+                "description": "Utilized for cloud hosting, storage, and deployment to ensure reliability and scalability."
+            }
+        ],
+        "liveUrl": "https://100vigha.com"
+    },
+    {
+        "id": 2,
+        "slug": "ozank-money-transfer",
+        "title": "OZANK – Global Money Transfer App",
+        "subtitle": "A secure and intuitive global money transfer app built with React and Firebase.",
+        "description": "A robust platform enabling users to send and receive money worldwide with ease. The app offers real-time transaction tracking, multi-currency support, and strong security features, all wrapped in a user-friendly interface.",
+        "timeline": "Developed over 9 months",
+        "purpose": "Designed to streamline international money transfers for individuals and businesses, providing a reliable, efficient, and accessible digital solution.",
+        "technologies": [
+            "IOS",
+            "Android",
+            "Node.js",
+            "Docker",
+            "AWS",
+            "PostgreSQL",
+            "Socket.io"
+        ],
+        "features": [
+            "User registration and authentication with email verification",
+            "Real-time transaction tracking and notifications",
+            "Multi-currency support with live exchange rates",
+            "In-app chat for customer support and dispute resolution",
+            "Admin dashboard for managing users and transactions"
+        ],
+        "techStack": [
+            {
+                "name": "IOS",
+                "description": "Used to build the native mobile application for Apple devices, ensuring a smooth and secure user experience."
+            },
+            {
+                "name": "Android",
+                "description": "Developed the native mobile app for Android devices, providing broad accessibility and performance."
+            },
+            {
+                "name": "Node.js",
+                "description": "Served as the backend runtime environment for building scalable APIs and handling business logic."
+            },
+            {
+                "name": "Docker",
+                "description": "Enabled containerization of services for consistent deployment and simplified development workflows."
+            },
+            {
+                "name": "AWS",
+                "description": "Provided cloud infrastructure for hosting, storage, and deployment, ensuring reliability and scalability."
+            },
+            {
+                "name": "PostgreSQL",
+                "description": "Used as the primary relational database for secure and efficient data management."
+            },
+            {
+                "name": "Socket.io",
+                "description": "Implemented real-time communication features such as transaction updates and in-app chat."
+            }
+        ],
+        "liveUrl": "https://ozank.com"
+    },
+    {
+        "id": 3,
+        "slug": "my-salon-club",
+        "title": "My Salon Club",
+        "subtitle": "Complete salon management app for booking, payments, and customer management.",
+        "description": "A comprehensive platform designed to streamline salon operations, enabling easy appointment booking, secure payments, and efficient customer management. The app provides salon owners and customers with a seamless and intuitive experience.",
+        "timeline": "Developed over 6 months",
+        "purpose": "Built to simplify and automate salon management processes, targeting salon owners and customers seeking a modern, digital solution for appointments, payments, and client engagement.",
+        "technologies": [
+            "React Native",
+            "Node.js",
+            "Docker",
+            "AWS",
+            "MySQL",
+            "Socket.io"
+        ],
+        "features": [
+            "Appointment scheduling with real-time availability",
+            "Secure payment processing with multiple payment gateways",
+            "Customer management system for tracking appointments and preferences",
+            "Push notifications for appointment reminders and promotions",
+            "Admin dashboard for managing salons, services, and staff"
+        ],
+        "techStack": [
+            {
+                "name": "React Native",
+                "description": "Used to build the cross-platform mobile application, enabling both iOS and Android support with a single codebase."
+            },
+            {
+                "name": "Node.js",
+                "description": "Served as the backend runtime environment for building scalable APIs and handling business logic."
+            },
+            {
+                "name": "Docker",
+                "description": "Enabled containerization of services for consistent deployment and simplified development workflows."
+            },
+            {
+                "name": "AWS",
+                "description": "Provided cloud infrastructure for hosting, storage, and deployment, ensuring reliability and scalability."
+            },
+            {
+                "name": "MySQL",
+                "description": "Used as the primary relational database for secure and efficient data management."
+            },
+            {
+                "name": "Socket.io",
+                "description": "Implemented real-time communication features such as appointment updates and notifications."
+            }
+        ],
+        "liveUrl": "http://mysalon.club/"
+    },
+    {
+        "id": 4,
+        "slug": "we-are-makeup",
+        "title": "We Are Makeup",
+        "subtitle": "A digital hub for connecting, empowering, and growing the makeup industry.",
+        "description": "A dynamic platform designed to unite makeup professionals, brands, and enthusiasts. It streamlines collaboration, showcases talent, and provides tools for business growth, education, and networking within the makeup industry.",
+        "timeline": "Developed over 12 months",
+        "purpose": "Created to empower the makeup community by offering a centralized digital space for networking, learning, and business development, targeting artists, brands, and beauty enthusiasts seeking growth and collaboration opportunities.",
+        "technologies": [
+            "React Native",
+            "Node.js",
+            "Docker",
+            "AWS",
+            "MySQL",
+            "Socket.io"
+        ],
+        "features": [
+            "Networking opportunities for makeup professionals and brands",
+            "Educational resources and tutorials for skill development",
+            "Showcase platform for artists to display their work",
+            "Business tools for managing appointments, clients, and finances",
+            "Community forums for discussion and collaboration"
+        ],
+        "techStack": [
+            {
+                "name": "React Native",
+                "description": "Used to build the cross-platform mobile application, enabling both iOS and Android support with a single codebase."
+            },
+            {
+                "name": "Node.js",
+                "description": "Served as the backend runtime environment for building scalable APIs and handling business logic."
+            },
+            {
+                "name": "Docker",
+                "description": "Enabled containerization of services for consistent deployment and simplified development workflows."
+            },
+            {
+                "name": "AWS",
+                "description": "Provided cloud infrastructure for hosting, storage, and deployment, ensuring reliability and scalability."
+            },
+            {
+                "name": "MySQL",
+                "description": "Used as the primary relational database for secure and efficient data management."
+            },
+            {
+                "name": "Socket.io",
+                "description": "Implemented real-time communication features such as appointment updates and notifications."
+            }
+        ],
+        "liveUrl": "https://wearemakeup.com/"
+    },
+    {
+        "id": 5,
+        "slug": "krushley-dating-platform",
+        "title": "Krushley Dating App",
+        "subtitle": "An innovative dating platform that connects users through shared interests and activities.",
+        "description": "A modern dating app designed to foster genuine connections by matching users based on common interests and preferred activities. The platform encourages meaningful interactions and provides a safe, engaging environment for singles to meet and connect.",
+        "timeline": "Developed over 6 months",
+        "purpose": "Built to revolutionize online dating by focusing on shared experiences and interests, targeting singles seeking authentic relationships and engaging ways to meet new people.",
+        "technologies": [
+            "React Native",
+            "Node.js",
+            "Docker",
+            "AWS",
+            "MySQL",
+            "Socket.io"
+        ],
+        "features": [
+            "User profiles with interest-based matching algorithms",
+            "In-app messaging and video chat for secure communication",
+            "Activity suggestions based on shared interests",
+            "Push notifications for new matches and messages",
+            "Admin dashboard for managing users and content"
+        ],
+        "techStack": [
+            {
+                "name": "React Native",
+                "description": "Used to build the cross-platform mobile application, enabling both iOS and Android support with a single codebase."
+            },
+            {
+                "name": "Node.js",
+                "description": "Served as the backend runtime environment for building scalable APIs and handling business logic."
+            },
+            {
+                "name": "Docker",
+                "description": "Enabled containerization of services for consistent deployment and simplified development workflows."
+            },
+            {
+                "name": "AWS",
+                "description": "Provided cloud infrastructure for hosting, storage, and deployment, ensuring reliability and scalability."
+            },
+            {
+                "name": "MySQL",
+                "description": "Used as the primary relational database for secure and efficient data management."
+            },
+            {
+                "name": "Socket.io",
+                "description": "Implemented real-time communication features such as appointment updates and notifications."
+            }
+        ],
+        "liveUrl": "https://krushley.com/"
+    },
+    {
+        "id": 6,
+        "slug": "sportyze-kids-app",
+        "title": "Sportyze Kids App",
+        "subtitle": "A comprehensive sports management app for kids.",
+        "description": "An all-in-one platform for kids to manage their sports activities, including scheduling, payments, and communication with coaches and parents.",
+        "timeline": "Developed over 4 months",
+        "purpose": "To provide a user-friendly interface for kids and parents to manage sports activities efficiently.",
+        "technologies": [
+            "Flutter",
+            "Node.js",
+            "MySQL",
+            "AWS",
+            "Socket.io"
+        ],
+        "features": [
+            "Activity scheduling with real-time updates",
+            "Secure payment processing for sports fees",
+            "Communication tools for coaches and parents",
+            "Progress tracking and performance analytics",
+            "User-friendly interface designed for kids"
+        ],
+        "techStack": [
+            {
+                "name": "Flutter",
+                "description": "Used to build the cross-platform mobile application, enabling both iOS and Android support with a single codebase."
+            },
+            {
+                "name": "Node.js",
+                "description": "Served as the backend runtime environment for building scalable APIs and handling business logic."
+            },
+            {
+                "name": "AWS",
+                "description": "Provided cloud infrastructure for hosting, storage, and deployment, ensuring reliability and scalability."
+            },
+            {
+                "name": "MySQL",
+                "description": "Used as the primary relational database for secure and efficient data management."
+            },
+            {
+                "name": "Socket.io",
+                "description": "Implemented real-time communication features such as appointment updates and notifications."
+            }
+        ],
+        "liveUrl": "https://sportyze.com/"
+    }
+]

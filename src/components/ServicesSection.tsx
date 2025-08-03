@@ -8,23 +8,23 @@ const ServicesSection = () => {
       title: 'Web Development',
       description: 'Custom web applications built with modern frameworks and technologies for optimal performance and user experience.',
       icon: Laptop,
-      features: ['React & Next.js', 'E-commerce Solutions', 'Progressive Web Apps', 'API Integration'],
+      features: ['React & Next.js', 'E-commerce Solutions', 'Progressive Web Apps', 'API Integration', 'Web maintenance'],
       color: 'from-blue-500 to-blue-600'
     },
     {
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications that engage users and drive business growth.',
       icon: Smartphone,
-      features: ['iOS & Android', 'React Native', 'Flutter', 'App Store Optimization'],
+      features: ['iOS & Android', 'React Native', 'Flutter', 'App Store Optimization', 'Mobile App maintenance'],
       color: 'from-green-500 to-green-600'
     },
-    {
-      title: 'Cloud Migration',
-      description: 'Seamless transition to cloud infrastructure with enhanced security, scalability, and cost-efficiency.',
-      icon: Cloud,
-      features: ['AWS & Azure', 'Database Migration', 'DevOps Setup', 'Security Implementation'],
-      color: 'from-purple-500 to-purple-600'
-    },
+    // {
+    //   title: 'Cloud Migration',
+    //   description: 'Seamless transition to cloud infrastructure with enhanced security, scalability, and cost-efficiency.',
+    //   icon: Cloud,
+    //   features: ['AWS & Azure', 'Database Migration', 'DevOps Setup', 'Security Implementation'],
+    //   color: 'from-purple-500 to-purple-600'
+    // },
     {
       title: 'UI/UX Design',
       description: 'User-centered design solutions that create intuitive and engaging digital experiences.',
@@ -32,20 +32,20 @@ const ServicesSection = () => {
       features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
       color: 'from-pink-500 to-pink-600'
     },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
-      icon: ChartBar,
-      features: ['Business Intelligence', 'Data Visualization', 'Machine Learning', 'Predictive Analytics'],
-      color: 'from-yellow-500 to-yellow-600'
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your business from evolving digital threats.',
-      icon: Shield,
-      features: ['Security Audits', 'Threat Assessment', 'Compliance', 'Incident Response'],
-      color: 'from-red-500 to-red-600'
-    }
+    // {
+    //   title: 'Data Analytics',
+    //   description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
+    //   icon: ChartBar,
+    //   features: ['Business Intelligence', 'Data Visualization', 'Machine Learning', 'Predictive Analytics'],
+    //   color: 'from-yellow-500 to-yellow-600'
+    // },
+    // {
+    //   title: 'Cybersecurity',
+    //   description: 'Comprehensive security solutions to protect your business from evolving digital threats.',
+    //   icon: Shield,
+    //   features: ['Security Audits', 'Threat Assessment', 'Compliance', 'Incident Response'],
+    //   color: 'from-red-500 to-red-600'
+    // }
   ];
 
   return (
@@ -100,7 +100,7 @@ const ServicesSection = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="bg-white rounded-2xl p-6 shadow-card">
-            <div className="text-3xl font-bold text-brand-blue mb-2">500+</div>
+            <div className="text-3xl font-bold text-brand-blue mb-2">39+</div>
             <div className="text-gray-600 font-body">Projects Delivered</div>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-card">

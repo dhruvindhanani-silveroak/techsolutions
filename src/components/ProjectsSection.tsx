@@ -7,40 +7,28 @@ const ProjectsSection = () => {
   const navigate = useNavigate();
   const projects = [
     {
-      title: 'E-Commerce Platform Redesign',
-      description: 'Complete overhaul of a major retail platform, resulting in 40% increase in conversion rates and improved user experience.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80',
-      tags: ['React', 'Node.js', 'MongoDB', 'AWS'],
-      metrics: [
-        { text: '40% Conversion Increase', icon: TrendingUp },
-        { text: '60% Load Time Reduction', icon: Zap },
-        { text: '2M+ Users', icon: Users }
-      ],
-      category: 'Web Development'
+      title: 'Ozank Money Transfer App',
+      description: 'A secure mobile app for instant money transfers and payments.',
+      image: 'https://i.ibb.co/KjWLRfn7/Screenshot-2025-07-28-at-4-40-45-PM.png',
+      tags: ['IOS', 'Android', 'Node.js', 'Docker', 'AWS', 'PostgreSQL', 'Socket.io'],
+      category: 'Mobile Development',
+      slug: 'ozank-money-transfer',
     },
     {
-      title: 'Healthcare Mobile App',
-      description: 'Cross-platform mobile application for patient management and telemedicine consultations with 150k+ active users.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
-      tags: ['React Native', 'Firebase', 'Healthcare', 'HIPAA'],
-      metrics: [
-        { text: '150k+ Active Users', icon: Users },
-        { text: '4.8 App Store Rating', icon: Star },
-        { text: '99.9% Uptime', icon: Shield }
-      ],
-      category: 'Mobile Development'
+      title: 'My Salon Club',
+      description: 'Complete salon management app for booking, payments, and customer management.',
+      image: 'https://i.ibb.co/9mDXKSyc/Screenshot-2025-07-28-at-4-45-06-PM.png',
+      tags: ['React Native', 'Node.js', 'Docker', 'AWS', 'MySQL', 'Socket.io'],
+      category: 'Mobile Development',
+      slug: 'my-salon-club',
     },
     {
-      title: 'Enterprise Cloud Migration',
-      description: 'Successfully migrated legacy systems to AWS cloud infrastructure for a Fortune 500 company, reducing costs by 35%.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
-      tags: ['AWS', 'DevOps', 'Kubernetes', 'Docker'],
-      metrics: [
-        { text: '35% Cost Reduction', icon: TrendingUp },
-        { text: 'Zero Downtime', icon: Clock },
-        { text: '5x Performance Boost', icon: Zap }
-      ],
-      category: 'Cloud Solutions'
+      title: 'Krushley Dating Platform',
+      description: 'An innovative dating platform that connects users through shared interests and activities.',
+      image: 'https://i.ibb.co/JFGPKRz5/Screenshot-2025-07-28-at-5-10-11-PM.png',
+      tags: ['Flutter', 'Node.js', 'Docker', 'AWS', 'MySQL', 'Socket.io'],
+      category: 'Mobile Development',
+      slug: 'krushley-dating-platform',
     }
   ];
 
@@ -94,23 +82,8 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-800">Key Results:</h4>
-                  {project.metrics.map((metric, idx) => {
-                    const IconComponent = metric.icon;
-                    return (
-                      <div key={idx} className="flex items-center text-sm text-gray-600 group/metric hover:text-brand-blue transition-colors">
-                        <div className="w-6 h-6 bg-gradient-to-r from-brand-blue to-brand-green rounded-full flex items-center justify-center mr-3 group-hover/metric:scale-110 transition-transform">
-                          <IconComponent size={12} className="text-white" />
-                        </div>
-                        {metric.text}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <Button variant="outline" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 hover:shadow-lg">
-                  View Case Study
+                <Button variant="outline" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 hover:shadow-lg" onClick={() => navigate(`/projects/${project.slug}`)}>
+                  View Details
                 </Button>
               </CardContent>
             </Card>

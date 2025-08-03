@@ -23,18 +23,36 @@ const Contact = () => {
     }));
   };
 
+  const FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScdz_QyxNiX9VD2nqR0MmOspDV3Ms9mQ8Mpva7-ShNIP4zPwg/formResponse';
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    const data = new FormData();
+    // Replace 'entry.X' with your actual Google Form field entry IDs
+    data.append('entry.1635521394', formData.name);
+    data.append('entry.1179498991', formData.email);
+    data.append('entry.443817391', formData.message);
+
+    fetch(FORM_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: data,
+    })
+      .then(() => {
+        alert('Form submitted successfully!');
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => alert('Error submitting form.'));
+
+
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4">
@@ -53,14 +71,14 @@ const Contact = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            
+
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-heading font-bold text-gray-800 mb-8">
                   Get in Touch
                 </h2>
-                
+
                 <div className="space-y-6">
                   {/* Location */}
                   <div className="flex items-start space-x-4">
@@ -72,9 +90,15 @@ const Contact = () => {
                         Our Location
                       </h3>
                       <p className="text-gray-600 font-body">
-                        123 Tech Street<br />
-                        Digital City, 10010<br />
-                        United States
+                        <a
+                          href="https://maps.app.goo.gl/1a2nRU3x6LSzomLN8"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-brand-blue"
+                        >
+                          Ganesh Meridian, Opp Kargil Petrol Pump,<br />
+                          S.G.highway, Sola, Ahmadabad
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -89,7 +113,9 @@ const Contact = () => {
                         Phone Number
                       </h3>
                       <p className="text-gray-600 font-body">
-                        +1 (555) 123-4567
+                        <a href="tel:+919558693432" className="hover:underline text-brand-blue">+91 9558693432</a>
+                        <br />
+                        <a href="tel:+917043524203" className="hover:underline text-brand-blue">+91 7043524203</a>
                       </p>
                     </div>
                   </div>
@@ -104,7 +130,7 @@ const Contact = () => {
                         Email Address
                       </h3>
                       <p className="text-gray-600 font-body">
-                        hello@techsolutions.com
+                        <a href="mailto:contact@teckysoft.com" className="hover:underline text-brand-blue">contact@teckysoft.com</a>
                       </p>
                     </div>
                   </div>
@@ -129,11 +155,11 @@ const Contact = () => {
               </div>
 
               {/* Map */}
-              <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
+              {/* <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
                 <p className="text-gray-500 font-body">
                   Interactive Map will be embedded here
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Contact Form */}
@@ -193,8 +219,8 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl py-3 flex items-center justify-center space-x-2"
                     >
                       <Send className="w-5 h-5" />
@@ -207,35 +233,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-brand-blue to-brand-green">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 font-body mb-8 leading-relaxed">
-              Let us discuss how our IT solutions can help you achieve your business goals and stay ahead of the competition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                className="bg-white text-brand-blue hover:bg-gray-50 rounded-xl px-8 py-3 font-medium"
-              >
-                Schedule a Call
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-brand-blue rounded-xl px-8 py-3 font-medium"
-              >
-                View Our Portfolio
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

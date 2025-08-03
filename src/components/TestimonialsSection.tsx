@@ -5,27 +5,24 @@ import { Star, Quote } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "TechSolutions transformed our entire digital infrastructure. Their cloud migration strategy reduced our operational costs by 35% while improving system performance dramatically. The team's expertise and professionalism exceeded our expectations.",
+      quote: "TeckySoft delivered a powerful, reliable solution that completely streamlined our global money transfer operations. Their platform's real-time tracking, multi-currency capabilities, and top-tier security have given our users confidence and ease like never before. The intuitive interface is the icing on the cake. Truly exceeded our expectations.",
       name: "Sarah Johnson",
       position: "CTO",
-      company: "Innovation Corp",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?auto=format&fit=crop&w=150&q=80",
+      company: "OZANK Money Transfer",
       rating: 5
     },
     {
-      quote: "The mobile app they developed for our healthcare platform has been a game-changer. With over 150,000 active users and a 4.8-star rating, it's clear that TechSolutions understands both technology and user experience.",
-      name: "Dr. Michael Chen",
+      quote: "TeckySoft completely revolutionized how we manage our salon. Their platform made appointment scheduling effortless, payments secure, and customer tracking incredibly efficient. It’s streamlined every aspect of our daily operations. The user-friendly design has been a hit with both our staff and clients. Truly exceeded our expectations in every way!",
+      name: "Jessica Smith",
       position: "Founder & CEO",
-      company: "HealthFirst Solutions",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
+      company: "My Salon Club",
       rating: 5
     },
     {
-      quote: "Working with TechSolutions on our e-commerce platform redesign was exceptional. They delivered a 40% increase in conversion rates and significantly improved our user engagement. Highly recommended for any digital transformation project.",
+      quote: "Working with TeckySoft on this app has been a game-changer. Managing our kids' sports is so much easier now—scheduling, payments, messaging with coaches—everything’s in one place. It’s super easy to use and saves us so much time. Honestly, we can’t imagine going back to how things were before!",
       name: "Emily Rodriguez",
       position: "Head of Digital Marketing",
       company: "RetailPro Inc",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
       rating: 5
     }
   ];
@@ -75,11 +72,6 @@ const TestimonialsSection = () => {
 
                 {/* Author */}
                 <div className="flex items-center">
-                  <img 
-                    src={testimonial.avatar} 
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
                   <div>
                     <h4 className="font-semibold text-gray-800 font-heading">{testimonial.name}</h4>
                     <p className="text-sm text-gray-600 font-body">{testimonial.position}</p>
@@ -89,28 +81,6 @@ const TestimonialsSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-20 bg-gray-50 rounded-3xl p-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-brand-blue mb-2 font-heading">500+</div>
-              <div className="text-gray-600 font-body">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-brand-green mb-2 font-heading">98%</div>
-              <div className="text-gray-600 font-body">Client Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-brand-blue mb-2 font-heading">50+</div>
-              <div className="text-gray-600 font-body">Team Members</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-brand-green mb-2 font-heading">24/7</div>
-              <div className="text-gray-600 font-body">Support Available</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

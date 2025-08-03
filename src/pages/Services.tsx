@@ -31,7 +31,8 @@ const Services = () => {
         'E-commerce platforms with secure payment integration',
         'Progressive Web Apps (PWAs) for enhanced mobile experience',
         'Content Management Systems (CMS) implementation',
-        'API development and third-party integrations'
+        'API development and third-party integrations',
+        'Websites maintenance and support'
       ],
       color: 'from-blue-500 to-blue-600'
     },
@@ -44,29 +45,30 @@ const Services = () => {
         'Cross-platform solutions using React Native and Flutter',
         'Mobile app UI/UX design and optimization',
         'App Store and Google Play deployment',
-        'Mobile app maintenance and updates'
+        'Mobile app maintenance and updates',
+        'Mobile app security and performance optimization'
       ],
       color: 'from-green-500 to-green-600'
     },
-    {
-      title: 'Cloud Solutions',
-      icon: Cloud,
-      description: 'Migrate to the cloud and leverage scalable infrastructure for improved performance and cost efficiency.',
-      features: [
-        'Cloud migration strategy and implementation',
-        'AWS, Azure, and Google Cloud Platform services',
-        'DevOps and CI/CD pipeline setup',
-        'Cloud security and compliance management',
-        'Serverless architecture and microservices'
-      ],
-      color: 'from-purple-500 to-purple-600'
-    },
+    // {
+    //   title: 'Cloud Solutions',
+    //   icon: Cloud,
+    //   description: 'Migrate to the cloud and leverage scalable infrastructure for improved performance and cost efficiency.',
+    //   features: [
+    //     'Cloud migration strategy and implementation',
+    //     'AWS, Azure, and Google Cloud Platform services',
+    //     'DevOps and CI/CD pipeline setup',
+    //     'Cloud security and compliance management',
+    //     'Serverless architecture and microservices'
+    //   ],
+    //   color: 'from-purple-500 to-purple-600'
+    // },
     {
       title: 'UI/UX Design',
       icon: Palette,
       description: 'Design intuitive and engaging user interfaces that enhance customer satisfaction and conversion rates.',
       features: [
-        'User research and persona development',
+        'User research and personas development',
         'Wireframing and prototyping',
         'Visual design and brand identity',
         'Usability testing and optimization',
@@ -74,32 +76,32 @@ const Services = () => {
       ],
       color: 'from-pink-500 to-pink-600'
     },
-    {
-      title: 'Data Analytics',
-      icon: ChartBar,
-      description: 'Transform raw data into actionable insights that drive informed business decisions and growth.',
-      features: [
-        'Business intelligence dashboard development',
-        'Data visualization and reporting tools',
-        'Machine learning and predictive analytics',
-        'Data warehouse design and implementation',
-        'Real-time analytics and monitoring systems'
-      ],
-      color: 'from-yellow-500 to-yellow-600'
-    },
-    {
-      title: 'Cybersecurity',
-      icon: Shield,
-      description: 'Protect your digital assets with comprehensive security solutions and risk management strategies.',
-      features: [
-        'Security audits and vulnerability assessments',
-        'Penetration testing and threat modeling',
-        'Compliance management (GDPR, HIPAA, SOC 2)',
-        'Security monitoring and incident response',
-        'Employee security training and awareness'
-      ],
-      color: 'from-red-500 to-red-600'
-    }
+    // {
+    //   title: 'Data Analytics',
+    //   icon: ChartBar,
+    //   description: 'Transform raw data into actionable insights that drive informed business decisions and growth.',
+    //   features: [
+    //     'Business intelligence dashboard development',
+    //     'Data visualization and reporting tools',
+    //     'Machine learning and predictive analytics',
+    //     'Data warehouse design and implementation',
+    //     'Real-time analytics and monitoring systems'
+    //   ],
+    //   color: 'from-yellow-500 to-yellow-600'
+    // },
+    // {
+    //   title: 'Cybersecurity',
+    //   icon: Shield,
+    //   description: 'Protect your digital assets with comprehensive security solutions and risk management strategies.',
+    //   features: [
+    //     'Security audits and vulnerability assessments',
+    //     'Penetration testing and threat modeling',
+    //     'Compliance management (GDPR, HIPAA, SOC 2)',
+    //     'Security monitoring and incident response',
+    //     'Employee security training and awareness'
+    //   ],
+    //   color: 'from-red-500 to-red-600'
+    // }
   ];
 
   const processSteps = [
@@ -219,22 +221,27 @@ const Services = () => {
             {processSteps.map((step, index) => {
               const IconComponent = step.icon;
               return (
-                <div key={index} className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full border-2 border-brand-green flex items-center justify-center text-brand-green font-bold text-sm">
-                      {index + 1}
-                    </div>
+                <div key={index} className="text-center group p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="relative mb-6">
+                  {/* Icon container with gradient background and hover effect */}
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    {/* Render the dynamic icon component */}
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-heading font-semibold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 font-body leading-relaxed">
-                    {step.description}
-                  </p>
+                  {/* Step number badge - positioned to be on the top-left side of the icon */}
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-white rounded-full border-2 border-green-500 flex items-center justify-center text-green-600 font-bold text-sm">
+                    {index + 1}
+                  </div>
                 </div>
+                {/* Step title with hover effect */}
+                <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                  {step.title}
+                </h3>
+                {/* Step description */}
+                <p className="text-gray-600 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
               );
             })}
           </div>
@@ -254,18 +261,19 @@ const Services = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
+                onClick={() => window.location.href = '/contact'}
                 className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl min-w-[220px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
+              {/* <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-8 py-4 text-lg font-semibold rounded-xl min-w-[220px] transition-all duration-300"
               >
                 Schedule Consultation
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
