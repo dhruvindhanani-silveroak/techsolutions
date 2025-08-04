@@ -3,30 +3,44 @@ import { useLocation } from 'react-router-dom';
 
 /**
  * Custom hook to scroll to top when route changes
- * @param behavior - 'smooth' for smooth scrolling, 'auto' for instant (default: 'smooth')
- * @param delay - Delay in milliseconds before scrolling (default: 0)
+ * @param behavior - 'smooth' for smooth scrolling, 'auto' for instant (default: 'auto' for production compatibility)
+ * @param delay - Delay in milliseconds before scrolling (default: 100)
  */
 export const useScrollToTop = (
-  behavior: ScrollBehavior = 'smooth',
-  delay: number = 0
+  behavior: ScrollBehavior = 'auto',
+  delay: number = 100
 ) => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior,
-      });
+      try {
+        // Multiple fallback methods for better cross-browser support
+        if ('scrollTo' in window) {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior,
+          });
+        } else {
+          // Fallback for older browsers
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+        }
+      } catch (error) {
+        // Final fallback
+        console.warn('ScrollToTop failed:', error);
+        try {
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+        } catch (fallbackError) {
+          console.warn('Fallback scroll failed:', fallbackError);
+        }
+      }
     };
 
-    if (delay > 0) {
-      const timeoutId = setTimeout(scrollToTop, delay);
-      return () => clearTimeout(timeoutId);
-    } else {
-      scrollToTop();
-    }
+    const timeoutId = setTimeout(scrollToTop, delay);
+    return () => clearTimeout(timeoutId);
   }, [pathname, behavior, delay]);
 };
 
@@ -34,12 +48,27 @@ export const useScrollToTop = (
  * Function to manually scroll to top
  * @param behavior - 'smooth' for smooth scrolling, 'auto' for instant
  */
-export const scrollToTop = (behavior: ScrollBehavior = 'smooth') => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior,
-  });
+export const scrollToTop = (behavior: ScrollBehavior = 'auto') => {
+  try {
+    if ('scrollTo' in window) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior,
+      });
+    } else {
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+  } catch (error) {
+    console.warn('Manual scrollToTop failed:', error);
+    try {
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    } catch (fallbackError) {
+      console.warn('Fallback manual scroll failed:', fallbackError);
+    }
+  }
 };
 
 /**
@@ -50,15 +79,26 @@ export const scrollToTop = (behavior: ScrollBehavior = 'smooth') => {
  */
 export const scrollToElement = (
   elementId: string,
-  behavior: ScrollBehavior = 'smooth',
+  behavior: ScrollBehavior = 'auto',
   offset: number = 0
 ) => {
-  const element = document.getElementById(elementId);
-  if (element) {
-    const elementPosition = element.offsetTop - offset;
-    window.scrollTo({
-      top: elementPosition,
-      behavior,
-    });
+  try {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementPosition = element.offsetTop - offset;
+      if ('scrollTo' in window) {
+        window.scrollTo({
+          top: elementPosition,
+          behavior,
+        });
+      } else {
+        document.documentElement.scrollTop = elementPosition;
+        document.body.scrollTop = elementPosition;
+      }
+    } else {
+      console.warn(`Element with ID "${elementId}" not found`);
+    }
+  } catch (error) {
+    console.warn('ScrollToElement failed:', error);
   }
 };
