@@ -1,16 +1,13 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { scrollToTopProduction } from '@/utils/scrollUtils';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Scroll to top when the route changes
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'auto', // Use 'auto' for instant scroll
-    });
+    // Use the production-ready scroll function
+    scrollToTopProduction();
   }, [pathname]);
 
   return null; // This component doesn't render anything

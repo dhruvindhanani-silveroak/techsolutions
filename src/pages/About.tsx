@@ -60,10 +60,10 @@ const About = () => {
   const teamMembers = [
     {
       name: 'Kenil Patel',
-      role: 'Founder & CEO',
+      role: 'Founder, CEO, Full Stack Developer',
       image: '/placeholder.svg',
-      description: 'Tech visionary with a passion for building innovative software solutions that drive business success.',
-      skills: ['Leadership', 'Project Management'],
+      description: 'Visionary leader with a passion for technology and a track record of delivering innovative software solutions that drive business success.',
+      skills: ['Leadership', 'Project Management', 'Full Stack Development'],
       social: {
         linkedin: '#',
         github: '#',
@@ -72,7 +72,7 @@ const About = () => {
     },
     {
       name: 'Yash Dholaria',
-      role: 'Co-Founder & CMO',
+      role: 'Co-Founder, CMO, Project Management',
       image: '/placeholder.svg',
       description: 'Marketing strategist with a focus on digital transformation, driving growth through innovative marketing solutions.',
       skills: ['Digital Marketing', 'SEO', 'Content Strategy'],
