@@ -19,7 +19,7 @@ const Blog = () => {
     "date": "2025-06-11",
     "readTime": "10 min read",
     "category": "Mobile Development",
-    "image": "https://i.ibb.co/W4gshKbB/image.png",
+    "image": "/images/blogs/blog1.png",
     "slug": "why-every-business-needs-a-mobile-app-in-2025"
   },
   {
@@ -29,7 +29,7 @@ const Blog = () => {
     "date": "2025-01-19",
     "readTime": "10 min read",
     "category": "Web Development",
-    "image": "https://i.ibb.co/N639kZ4X/image.png",
+    "image": "/images/blogs/blog2.png",
     "slug": "web-development-trends-in-2025-what-you-need-to-know"
   },
   {
@@ -39,7 +39,7 @@ const Blog = () => {
     "date": "2024-10-30",
     "readTime": "10 min read",
     "category": "Mobile Development",
-    "image": "https://i.ibb.co/SXJx283r/image.png",
+    "image": "/images/blogs/blog3.png",
     "slug": "android-vs-ios-app-development-which-is-right-for-your-business"
   },
   {
@@ -49,7 +49,7 @@ const Blog = () => {
     "date": "2024-07-22",
     "readTime": "10 min read",
     "category": "Web Development",
-    "image": "https://i.ibb.co/Fk0fTSqH/image.png",
+    "image": "/images/blogs/blog4.png",
     "slug": "how-we-build-custom-web-solutions-that-deliver-results"
   },
   {
@@ -59,7 +59,7 @@ const Blog = () => {
     "date": "2024-04-09",
     "readTime": "10 min read",
     "category": "Mobile Development",
-    "image": "https://i.ibb.co/vC9x2KWm/image.png",
+    "image": "/images/blogs/blog5.png",
     "slug": "top-5-mistakes-to-avoid-when-developing-a-mobile-app"
   },
   {
@@ -69,7 +69,7 @@ const Blog = () => {
     "date": "2023-12-01",
     "readTime": "10 min read",
     "category": "Design",
-    "image": "https://i.ibb.co/GzLDVGx/image.png",
+    "image": "/images/blogs/blog6.png",
     "slug": "how-a-well-designed-website-increases-your-business-credibility"
   },
   {
@@ -79,7 +79,7 @@ const Blog = () => {
     "date": "2023-08-14",
     "readTime": "10 min read",
     "category": "Web Development",
-    "image": "https://i.ibb.co/Swvtwq7R/image.png",
+    "image": "/images/blogs/blog7.png",
     "slug": "our-development-process-from-idea-to-launch"
   },
   // {
@@ -109,10 +109,9 @@ const Blog = () => {
     "date": "2022-03-17",
     "readTime": "10 min read",
     "category": "Design",
-    "image": "https://i.ibb.co/5WRVhTJX/image.png",
+    "image": "/images/blogs/blog8.png",
     "slug": "designing-user-centered-apps-and-websites-that-drive-business-growth"
   },
-
 ]
 
   const categories = ['All', 'Web Development', 'Mobile Development', 'Design'];
