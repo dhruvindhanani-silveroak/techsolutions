@@ -138,6 +138,8 @@ const Contact = () => {
                         <a href="tel:+919558693432" className="hover:underline text-brand-blue">+91 9558693432</a>
                         <br />
                         <a href="tel:+917043524203" className="hover:underline text-brand-blue">+91 7043524203</a>
+                        <br />
+                        <a href="tel:+1 (856) 924-4306" className="hover:underline text-brand-blue">+1 (856) 924-4306</a>
                       </p>
                     </div>
                   </div>
