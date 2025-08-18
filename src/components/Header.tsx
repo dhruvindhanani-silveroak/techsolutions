@@ -20,11 +20,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-green rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">T</span>
+          <Link to="/" className="flex items-center">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center">
+              <img src="/images/logo.png" alt="Logo" className="w-10 h-10" />
             </div>
-            <span className="text-xl font-heading font-bold text-gray-800">TeckySoft</span>
+            <span className="text-xl font-heading font-bold text-gray-800 mt-2 ml-2">TeckySoft</span>
           </Link>
 
           {/* Desktop Navigation */}
