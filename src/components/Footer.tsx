@@ -33,10 +33,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-green rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">T</span>
-              </div>
-              <span className="text-xl font-heading font-bold">TeckySoft</span>
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center">
+              <img src="/images/logo.png" alt="Logo" className="w-10 h-10" />
+            </div>
+              <span className="text-xl font-heading font-bold text-white mt-2 ml-2">TeckySoft</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md font-body">
               Transforming businesses through innovative IT solutions. We deliver cutting-edge technology services that drive growth, efficiency, and digital transformation.
@@ -78,11 +78,11 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm">
           <p className="font-body">&copy; {currentYear} TeckySoft. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          {/* <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="/privacy" className="hover:text-white transition-colors font-body">Privacy Policy</a>
             <a href="/terms" className="hover:text-white transition-colors font-body">Terms of Service</a>
             <a href="/cookies" className="hover:text-white transition-colors font-body">Cookie Policy</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
