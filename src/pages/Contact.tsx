@@ -87,17 +87,39 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-gray-800 mb-1">
-                        Our Location
+                        India
                       </h3>
                       <p className="text-gray-600 font-body">
                         <a
-                          href="https://maps.app.goo.gl/1a2nRU3x6LSzomLN8"
+                          href="https://maps.app.goo.gl/6PhbCa7zLZkA7NpAA"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hover:underline text-brand-blue"
                         >
-                          Ganesh Meridian, Opp Kargil Petrol Pump,<br />
-                          S.G.highway, Sola, Ahmadabad
+                          2 - Rameshwar Shopping, Bapa Sitaram Chowk,<br />
+                          Nava Naroda, Ahmedabad - 382345
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-gray-800 mb-1">
+                        USA
+                      </h3>
+                      <p className="text-gray-600 font-body">
+                        <a
+                          href="https://maps.app.goo.gl/BdsNJPkXi5vh7Vaw8"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-brand-blue"
+                        >
+                          515 Mullica hill rd, apt h215, glassboro, nj -08028
                         </a>
                       </p>
                     </div>
