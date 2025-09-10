@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { MapPin, Phone, Clock, Mail, Send } from 'lucide-react';
+import { MapPin, Clock, Mail, Send } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -87,7 +87,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-gray-800 mb-1">
-                        India
+                        India (HO)
                       </h3>
                       <p className="text-gray-600 font-body">
                         <a
@@ -99,6 +99,10 @@ const Contact = () => {
                           2 - Rameshwar Shopping, Bapa Sitaram Chowk,<br />
                           Nava Naroda, Ahmedabad - 382345
                         </a>
+                        <br /><br />
+                        <strong>Phone:</strong><br />
+                        <a href="tel:+919558693432" className="hover:underline text-brand-blue">+91 9558693432</a><br />
+                        <a href="tel:+917043524203" className="hover:underline text-brand-blue">+91 7043524203</a>
                       </p>
                     </div>
                   </div>
@@ -121,25 +125,35 @@ const Contact = () => {
                         >
                           515 Mullica hill rd, apt h215, glassboro, nj -08028
                         </a>
+                        <br /><br />
+                        <strong>Phone:</strong><br />
+                        <a href="tel:+1 (856) 924-4306" className="hover:underline text-brand-blue">+1 (856) 924-4306</a>
                       </p>
                     </div>
                   </div>
 
-                  {/* Phone */}
+                  {/* Location */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-brand-green rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-gray-800 mb-1">
-                        Phone Number
+                        London
                       </h3>
                       <p className="text-gray-600 font-body">
-                        <a href="tel:+919558693432" className="hover:underline text-brand-blue">+91 9558693432</a>
-                        <br />
-                        <a href="tel:+917043524203" className="hover:underline text-brand-blue">+91 7043524203</a>
-                        <br />
-                        <a href="tel:+1 (856) 924-4306" className="hover:underline text-brand-blue">+1 (856) 924-4306</a>
+                        <a
+                          href="https://maps.google.com/maps?q=50+Hibbert+Road+Harrow+HA3+7JS"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-brand-blue"
+                        >
+                          50 Hibbert Road, Harrow HA3 7JS
+                        </a>
+                        <br /><br />
+                        <strong>Phone:</strong><br />
+                        <a href="tel:+447767573071" className="hover:underline text-brand-blue">+44 7767 573071</a><br />
+                        <a href="tel:+447901203424" className="hover:underline text-brand-blue">+44 7901203424</a>
                       </p>
                     </div>
                   </div>

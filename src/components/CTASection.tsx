@@ -50,6 +50,12 @@ const CTASection = () => {
                     <a href="tel:+919558693432" className="hover:underline">+91 9558693432</a>
                     <br />
                     <a href="tel:+917043524203" className="hover:underline">+91 7043524203</a>
+                    <br />
+                    <a href="tel:+1 (856) 924-4306" className="hover:underline">+1 (856) 924-4306</a>
+                    <br />
+                    <a href="tel:+447767573071" className="hover:underline">+44 7767 573071</a>
+                    <br />
+                    <a href="tel:+447901203424" className="hover:underline">+44 7901203424</a>
                   </p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -73,7 +79,25 @@ const CTASection = () => {
                       rel="noopener noreferrer"
                       className="hover:underline"
                     >
-                      Ganesh Meridian, Opp Kargil Petrol Pump, S.G.highway, Sola, Ahmadabad
+                      India (HO): Ganesh Meridian, Opp Kargil Petrol Pump, S.G.highway, Sola, Ahmadabad
+                    </a>
+                    <br /><br />
+                    <a
+                      href="https://maps.google.com/maps?q=515+Mullica+hill+rd+apt+h215+glassboro+nj+08028"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      USA: 515 Mullica hill rd, apt h215, glassboro, nj -08028
+                    </a>
+                    <br /><br />
+                    <a
+                      href="https://maps.google.com/maps?q=50+Hibbert+Road+Harrow+HA3+7JS"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      London: 50 Hibbert Road, Harrow HA3 7JS
                     </a>
                   </p>
                 </div>
